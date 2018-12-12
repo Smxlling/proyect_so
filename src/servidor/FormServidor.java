@@ -66,7 +66,7 @@ public class FormServidor extends JFrame {
 
         getContentPane().setLayout(null);
 
-        setTitle("CHAT (servidor)");
+        setTitle("Proyecto Final");
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent evt) {
                 exitForm(evt);
@@ -113,7 +113,7 @@ public class FormServidor extends JFrame {
         lbProcesos.setBounds(590, 110, 250, 16);
         
         jLabel2.setFont(new Font("MS Sans Serif", 1, 14));
-        jLabel2.setText("IP Local:");
+        jLabel2.setText("Ip local:");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(30, 70, 60, 20);
 
@@ -141,7 +141,7 @@ public class FormServidor extends JFrame {
 
         botonEnviar.setFont(new Font("MS Sans Serif", 1, 16));
         botonEnviar.setForeground(new Color(204, 102, 0));
-        botonEnviar.setText("ENVIAR !");
+        botonEnviar.setText("Enviar");
         getContentPane().add(botonEnviar);
         botonEnviar.setBounds(380, 352, 180, 60);
 		botonEnviar.addActionListener(new ActionListener() {
@@ -150,9 +150,9 @@ public class FormServidor extends JFrame {
             }
         });
                 
-        desconectarUsuario.setFont(new Font("MS Sans Serif", 1, 10));
+        desconectarUsuario.setFont(new Font("MS Sans Serif", 1, 16));
         desconectarUsuario.setForeground(new Color(255,20,20));
-        desconectarUsuario.setText("Desconectar seleccionados!");
+        desconectarUsuario.setText("Detener");
         getContentPane().add(desconectarUsuario);
         desconectarUsuario.setBounds(380, 315, 180, 25);
 		desconectarUsuario.addActionListener(new ActionListener() {

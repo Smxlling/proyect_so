@@ -24,8 +24,8 @@ public class InicioServidor {
    			while(true){
    				Socket s=null;   				
    				s = socketServ.accept(); 
-   				FormServidor.us.addElement(s.getInetAddress().getHostName()+"/"+
-   					s.getInetAddress().getHostAddress()+":"+s.getPort());
+   				
+   				FormServidor.us.addElement(s.getInetAddress().getHostName()+"/"+s.getInetAddress().getHostAddress()+":"+s.getPort());
    				FormServidor.salida(2, "Se ha conectado "+s.getInetAddress().getHostName());
    				
    				new HiloRecibe(s); //nuevo hilo q atendera los mensajes de este cleinte
@@ -41,4 +41,8 @@ public class InicioServidor {
    			FormServidor.salida(1,e.getMessage());
    		}
     }
+    
+   
+
+
 }

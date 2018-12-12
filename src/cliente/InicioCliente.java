@@ -10,6 +10,7 @@ class InicioCliente {
   	public static void arrancarCliente(String dir, int puerto){
   		try{   
   			sckt = new Socket(dir,puerto);
+  			
   		}
   		catch(Exception e){ 
    			FormCliente.salida(1,e.getMessage());

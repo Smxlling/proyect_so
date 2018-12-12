@@ -34,7 +34,7 @@ public class FormCliente extends JFrame {
     
     public FormCliente() {
         initComponents();
-        setSize(600,450);       
+        setSize(520,450);       
     }
 
     private void initComponents() {
@@ -57,7 +57,7 @@ public class FormCliente extends JFrame {
         
         getContentPane().setLayout(null);
 
-        setTitle("CHAT (cliente)");
+        setTitle("Protecto Final");
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent evt) {
                 exitForm(evt);
@@ -67,12 +67,12 @@ public class FormCliente extends JFrame {
 		envioDatos.setEditable(true);
         scEnvioDatos.setViewportView(envioDatos);		
         getContentPane().add(scEnvioDatos);
-        scEnvioDatos.setBounds(30, 352, 330, 60);        
+        scEnvioDatos.setBounds(30, 352, 250, 60);        
 
         conversacion.setEditable(false);
         scConversacion.setViewportView(conversacion);
         getContentPane().add(scConversacion);
-        scConversacion.setBounds(30, 130, 330, 210);
+        scConversacion.setBounds(30, 130, 250, 210);
 
         jLabel1.setFont(new Font("MS Sans Serif", 1, 24));
         jLabel1.setForeground(new Color(204, 102, 0));
@@ -89,16 +89,16 @@ public class FormCliente extends JFrame {
         muestraIp.setBounds(120, 70, 100, 20);
         
         jLabel5.setFont(new Font("MS Sans Serif", 1, 14));
-        jLabel5.setText("puerto:");
+        jLabel5.setText("Puerto:");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(230, 70, 60, 20);
         
         getContentPane().add(puertoServ);
         puertoServ.setBounds(290, 70, 40, 20);
         
-        conectarme.setFont(new Font("MS Sans Serif", 1, 12));
-        conectarme.setForeground(new Color(255,20,20));
-        conectarme.setText("Conectarme!");
+        conectarme.setFont(new Font("MS Sans Serif", 1, 16));
+        
+        conectarme.setText("Conectar");
         getContentPane().add(conectarme);
         conectarme.setBounds(340, 70, 120, 20);
 		conectarme.addActionListener(new ActionListener() {
@@ -107,39 +107,38 @@ public class FormCliente extends JFrame {
             }
         });
 
-        jLabel3.setFont(new Font("MS Sans Serif", 1, 14));
+        jLabel3.setFont(new Font("MS Sans Serif", 1, 12));
         jLabel3.setText("Conversación:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(30, 100, 110, 20);
+        jLabel3.setBounds(30, 110, 110, 20);
 
         scUsuarios.setViewportView(usuarios);
         usuarios.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         getContentPane().add(scUsuarios);
-        scUsuarios.setBounds(380, 132, 180, 180);
+        scUsuarios.setBounds(300, 130,180, 210);
 
         jLabel4.setFont(new Font("MS Sans Serif", 1, 12));
-        jLabel4.setText("Clientes en el chat:");
+        jLabel4.setText("Conectados :");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(380, 110, 250, 16);
+        jLabel4.setBounds(300, 110, 250, 16);
 
         botonEnviar.setFont(new Font("MS Sans Serif", 1, 16));
-        botonEnviar.setForeground(new Color(204, 102, 0));
-        botonEnviar.setText("ENVIAR !");
-        botonEnviar.setEnabled(false);
+        botonEnviar.setText("Enviar");
+   
         getContentPane().add(botonEnviar);
-        botonEnviar.setBounds(380, 352, 180, 60);
+        botonEnviar.setBounds(300,380, 180, 30);
 		botonEnviar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 botonEnviarActionPerformed(evt);
             }
         });
                 
-        desconectarme.setFont(new Font("MS Sans Serif", 1, 10));
-        desconectarme.setForeground(new Color(255,20,20));
-        desconectarme.setText("Desconectarme del chat!");
-        desconectarme.setEnabled(false);
+        desconectarme.setFont(new Font("MS Sans Serif", 1, 16));
+       
+        desconectarme.setText("Salir");
+        
         getContentPane().add(desconectarme);
-        desconectarme.setBounds(380, 315, 180, 25);
+        desconectarme.setBounds(300, 352, 180, 25);
 		desconectarme.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 desconectarmeActionPerformed(evt);
